@@ -1,45 +1,34 @@
-# Neural Checker User guide <!-- TOC ignore:true -->
+# Pythautomata User guide <!-- TOC ignore:true -->
 
-The aim of this document is to guide the user in the usage of the Neural Checker tool.
+The aim of this document is to guide the user in the usage of the Pythautomata python library used for modeling finite state systems.
 
 <!-- TOC -->
 
-- [Neural Checker User guide ](#neural-checker-user-guide-)
-  - [Pythautomata](#pythautomata)
+- [Pythautomata User guide](#pythautomata-user-guide)
     - [Install pythautomata](#install-pythautomata)
     - [Moore machines](#moore-machines)
-      - [Creating a moore machine](#creating-a-moore-machine)
-        - [Dependencies](#dependencies)
-        - [Implementation](#implementation)
-      - [Moore machine generator](#moore-machine-generator)
-        - [Dependencies](#dependencies-1)
-        - [Implementation](#implementation-1)
-      - [DFA - moore machine comparator and converter](#dfa---moore-machine-comparator-and-converter)
-        - [Dependencies](#dependencies-2)
-        - [Implementation](#implementation-2)
-  - [PyModelExtractor](#pymodelextractor)
-    - [Install pymodelextractor](#install-pymodelextractor)
-    - [Moore machines](#moore-machines-1)
-      - [Moore machine L\*](#moore-machine-l)
-        - [Dependencies](#dependencies-3)
-        - [Implementation](#implementation-3)
+        - [Creating a moore machine](#creating-a-moore-machine)
+            - [Dependencies](#dependencies)
+            - [Implementation](#implementation)
+        - [Moore machine generator](#moore-machine-generator)
+            - [Dependencies](#dependencies)
+            - [Implementation](#implementation)
+        - [DFA - moore machine comparator and converter](#dfa---moore-machine-comparator-and-converter)
+            - [Dependencies](#dependencies)
+                - [Implementation](#implementation)
 
 <!-- /TOC -->
 
-## Pythautomata
-
-Pythautomata is a Python library for modeling finite state systems.
-
-### Install pythautomata
+## Install pythautomata
 
 ```python
 %pip install pythautomata 
 ```
-### Moore machines
+## Moore machines
 
-#### Creating a moore machine
+### Creating a moore machine
 
-##### Dependencies 
+#### Dependencies 
 
 ```python
 from pythautomata.base_types.alphabet import Alphabet
@@ -50,7 +39,7 @@ from pythautomata.model_comparators.moore_machine_comparison_strategy import Moo
 from pythautomata.model_exporters.dot_exporting_mm_strategy import DotExportingMMStrategy
 ```
 
-##### Implementation
+#### Implementation
 
 ```python
 # Input alphabet with symbols a, b and c
@@ -82,15 +71,15 @@ moore_machine = MooreMachineAutomaton(input_alphabet, output_alphabet, stateA, s
 moore_machine.export('./output_models/moore_machines/')
 ```
 
-#### Moore machine generator
+### Moore machine generator
 
-##### Dependencies 
+#### Dependencies 
 
 ```python
 from pythautomata.utilities.nicaud_mm_generator import generate_moore_machine
 ```
 
-##### Implementation
+#### Implementation
 
 ```python
 # Amount of states
@@ -102,9 +91,9 @@ generated_moore_machine = generate_moore_machine(input_alphabet, output_alphabet
 generated_moore_machine.export('./output_models/moore_machines/')
 ```
 
-#### DFA - moore machine comparator and converter
+### DFA - moore machine comparator and converter
 
-##### Dependencies 
+#### Dependencies 
 
 ```python
 from pythautomata.model_comparators.moore_machine_comparison_strategy import MooreMachineComparisonStrategy
@@ -113,7 +102,7 @@ from pythautomata.automata_definitions.tomitas_grammars import TomitasGrammars
 from pythautomata.automata_definitions.sample_moore_machines import SampleMooreMachines
 ```
 
-##### Implementation
+#### Implementation
 
 ```python
 # Tomitas DFA example
@@ -128,21 +117,3 @@ tomitas_moore_machine = SampleMooreMachines.get_tomitas_automaton_1()
 # Comparate automatons
 converted_moore_machine.__eq__(tomitas_moore_machine)
 ```
-
-## PyModelExtractor 
-
-The PyModelExtractor is a Python framework for the active learning of Automata in a black box context.
-
-### Install pymodelextractor
-
-```python
-%pip install pythautomata 
-```
-
-### Moore machines
-
-#### Moore machine L*
-
-##### Dependencies
-
-##### Implementation
