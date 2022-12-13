@@ -1,6 +1,6 @@
 # PyModelExtractor <!-- TOC ignore:true -->
 
-The aim of this document is to guide the user in the usage of the Neural Checker tool.
+The aim of this document is to guide the user in the usage of the pyModelExtractor library which is a Python framework for the active learning of Automata in a black box context.
 
 <!-- TOC -->
 
@@ -12,8 +12,6 @@ The aim of this document is to guide the user in the usage of the Neural Checker
             - [Implementation](#implementation)
 
 <!-- /TOC -->
-
-The PyModelExtractor is a Python framework for the active learning of Automata in a black box context.
 
 ## Install pymodelextractor
 

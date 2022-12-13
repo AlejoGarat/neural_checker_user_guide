@@ -1,4 +1,4 @@
-# Pythautomata User guide <!-- TOC ignore:true -->
+# Pythautomata user guide <!-- TOC ignore:true -->
 
 The aim of this document is to guide the user in the usage of the Pythautomata python library used for modeling finite state systems.
 
