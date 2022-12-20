@@ -4,10 +4,10 @@ digraph moore_machine {
 	"State A" [label="State A/0"]
 	"State A" -> "State A" [label=a]
 	"State A" -> "State B" [label=b]
-	"State C" [label="State C/1"]
 	"State B" [label="State B/1"]
 	"State B" -> "State C" [label=a]
 	"State B" -> "State B" [label=c]
+	"State C" [label="State C/1"]
 	node [shape=point]
 	start
 	start -> "State A"

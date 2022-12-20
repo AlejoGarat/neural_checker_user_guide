@@ -1,0 +1,12 @@
+digraph moore_machine {
+	rankdir=LR size="8,5"
+	node [shape=circle]
+	"ϵ" [label="ϵ/True"]
+	"ϵ" -> 0 [label=0]
+	"ϵ" -> "ϵ" [label=1]
+	0 [label="0/False"]
+	0 -> 0 [label="Σ"]
+	node [shape=point]
+	start
+	start -> "ϵ"
+}
